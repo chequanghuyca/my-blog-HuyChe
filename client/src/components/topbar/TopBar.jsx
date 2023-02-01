@@ -5,33 +5,20 @@ export default function TopBar() {
     const user = false;
     return (
         <div className='top'>
-            <div className='top-left'>
-                <a href={'https://www.facebook.com/huycheeeeee'} title='Facebook'>
-                    <i className='top-icon fa fa-facebook-official' style={{color:'#238ae6'}} aria-hidden='true'></i>
-                </a>
-                <a href={'https://zalo.me/0939260508'} title='Zalo'>
-                    <i className='top-icon fa fa-phone-square' style={{color:'#39c429'}} aria-hidden='true'></i>
-                </a>
-                <a href={'https://github.com/chequanghuyca'} title='Github'>
-                    <i className='top-icon fa fa-github-square' style={{color:'rgb(138, 15, 190)'}} aria-hidden='true'></i>
-                </a>
-            </div>
+            <div className='top-left'/>
             <div className='top-center'>
                 <div className='top-list'> 
                     <li className='top-list-item' >
-                        <Link className='link' to='/' >HOME</Link>
+                        <Link className='link' to='/' style={{padding:'10px', fontWeight: 'bold'}}>HOME</Link>
                     </li>
                     <li className='top-list-item' >
-                        <Link className='link' to='/' >ABOUT</Link>
+                        <Link className='link' to='/' style={{padding:'10px', fontWeight: 'bold'}}>ABOUT</Link>
                     </li>
                     <li className='top-list-item' >
-                        <Link className='link' to='/' >CONTACT</Link>
+                        <Link className='link' to='/' style={{padding:'10px', fontWeight: 'bold'}}>CONTACT</Link>
                     </li>
                     <li className='top-list-item' >
-                        <Link className='link' to='/write' >WRITE</Link>
-                    </li>
-                    <li className='top-list-item' >
-                        {user && 'LOGOUT'}
+                        <Link className='link' to='/write' style={{padding:'10px', fontWeight: 'bold'}}>WRITE</Link>
                     </li>
                 </div>
             </div>

@@ -1,5 +1,9 @@
 import './sidebar.css'
 
+function MyLink({ href, target, children }) {
+  return <a href={href} target={target}>{children}</a>;
+}
+
 export default function Sidebar() {
   return (
     <div className='sidebar'>
@@ -22,11 +26,17 @@ export default function Sidebar() {
       <div className='sidebar-item'>
         <span className='sidebar-title'>FOLLOW US</span>
         <div className='sidebar-social'>
-          <i className='sidebar-icon fa fa-facebook-official' style={{color:'#238ae6'}} aria-hidden='true'></i>
-          <i className='sidebar-icon fa fa fa-phone-square' style={{color:'#39c429'}} aria-hidden='true'></i>
-          <i className='sidebar-icon fa fa-github-square' style={{color:'rgb(138, 15, 190)'}} aria-hidden='true'></i>
+          <MyLink href='https://www.facebook.com/huycheeeeee' target='_blank'>
+            <i className='top-icon fa fa-facebook-official' style={{color:'#238ae6'}} aria-hidden='true'/>
+          </MyLink>
+          <MyLink href='https://zalo.me/0939260508' target='_blank'>
+            <i className='top-icon fa fa-phone-square' style={{color:'#39c429'}} aria-hidden='true'/>
+          </MyLink>
+          <MyLink href='https://github.com/chequanghuyca' target='_blank'>
+            <i className='top-icon fa fa-github-square' style={{color:'rgb(138, 15, 190)'}} aria-hidden='true'/>
+          </MyLink>
         </div>
-        </div>
+      </div>
     </div>
   )
 }
