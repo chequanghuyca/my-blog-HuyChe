@@ -11,7 +11,6 @@ export default function Login() {
             <input className='login-input' type='password' placeholder='Nhập mật khẩu của bạn...' />
             <button className='login-button'>Đăng nhập</button>
         </form>
-        <button className='login-register-button'>Đăng ký</button>
     </div>
   )
 }

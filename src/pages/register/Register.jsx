@@ -13,7 +13,6 @@ export default function Register() {
                 <input className='register-input' type='password' placeholder='Nhập mật khẩu...' />
                 <button className='register-button'>Đăng ký</button>
             </form>
-            <button className='register-login-button'>Đăng nhập</button>
         </div>
     )
 }
