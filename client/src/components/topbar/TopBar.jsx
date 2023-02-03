@@ -20,6 +20,7 @@ export default function TopBar() {
                     <li className='top-list-item' >
                         <Link className='link' to='/write' style={{padding:'10px', fontWeight: 'bold'}}>WRITE</Link>
                     </li>
+                    <div className='dot'/>
                 </div>
             </div>
             <div className='top-right'>
@@ -34,6 +35,7 @@ export default function TopBar() {
                             <li className='top-list-item'>
                                 <Link className='link' to='/register'>Đăng ký </Link>
                             </li>
+                            <div className='dot'/>
                         </ul>
                     )
                 }

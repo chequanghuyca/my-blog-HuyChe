@@ -49,6 +49,11 @@
     font-weight: 300;
     cursor: pointer;
     align-items: center;
+    transition: 0.2s;
+}
+
+.top-list-item:hover {
+    color: rgb(139, 139, 139);
 }
 
 .top-search-icon {
