@@ -1,36 +1,76 @@
+import axios from 'axios';
+import { useContext, useState } from 'react';
 import Sidebar from '../../components/sidebar/Sidebar'
+import { Context } from '../../context/Context';
 import './settings.css'
 
 export default function Settings() {
-  return ( 
-    <>
-        <div className='settings'>
-            <div className='settings-wrapper'>
-                <div className='settings-title'>
-                    <span className='settings-update-title'>Cập nhật tài khoản</span>
-                    <span className='settings-delete-title'>Xóa tài khoản</span>
-                </div>
-                <form className='settings-form'>
-                    <label>Ảnh đại diện</label>
-                    <div className='settings-profile-picture'>
-                        <img src='https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-6/285845860_3237378019807655_7858648806545589602_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=174925&_nc_ohc=fjWHpef9X7AAX8L-Prh&tn=qjky9nfMM4cr9NG1&_nc_ht=scontent.fsgn2-4.fna&oh=00_AfAFx2lAETdu59bL2N8CLa5Iya9fv9j3J3lW8RCa4OHR2g&oe=63DFC956' alt=''/>   
-                        <label htmlFor='fileInput' title='Update file ảnh'>
-                            <i className='settings-profile-picture-icon fa fa-upload'></i>
-                        </label>
-                        <input type='file' id='fileInput' style={{display: 'none'}}/>
+    const [file, setFile] = useState(null);
+    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [success, setSuccess] = useState(false);
+
+    const { user, dispatch } = useContext(Context);
+    const PF = 'http://localhost:5000/images/'
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        dispatch({ type: 'UPDATE_START' });
+        const updatedUser = { userId: user._id, username, email, password };
+        if (file) {
+            const data = new FormData();
+            const filename = Date.now() + file.name;
+            data.append('name', filename);
+            data.append('file', file);
+            updatedUser.profilePic = filename;
+            try {
+                await axios.post('/upload', data);
+            } catch (err) { }
+        }
+        try {
+            const res = await axios.put('/users/' + user._id, updatedUser);
+            setSuccess(true);
+            dispatch({ type: 'UPDATE_SUCCESS', payload: res.data });
+        } catch (err) {
+            dispatch({ type: 'UPDATE_FAILURE' });
+        }
+    };
+
+    return (
+        <>
+            <div className='settings'>
+                <div className='settings-wrapper'>
+                    <div className='settings-title'>
+                        <span className='settings-update-title'>Cập nhật tài khoản</span>
+                        <span className='settings-delete-title'>Xóa tài khoản</span>
                     </div>
-                    <label>Tài khoản</label>
-                    <input type='text' placeholder='huyche'/>
-                    <label>Email</label>
-                    <input type='email' placeholder='chequanghuybtt@gmail.com'/>
-                    <label>Mật khẩu</label>
-                    <input type='password'/>
-                    <button className='settings-submit'>Cập nhật</button>
-                </form>
+                    <form className='settings-form' onSubmit={handleSubmit}>
+                        <label>Ảnh đại diện</label>
+                        <div className='settings-profile-picture'>
+                            <img src={file ? URL.createObjectURL(file) : PF + user.profilePic} alt='' />
+                            <label htmlFor='fileInput' title='Update file ảnh'>
+                                <i className='settings-profile-picture-icon fa fa-upload' />
+                            </label>
+                            <input type='file' id='fileInput' style={{ display: 'none' }} onChange={(e) => setFile(e.target.files[0])} />
+                        </div>
+                        <label>Tài khoản</label>
+                        <input type='text' placeholder={user.username} onChange={(e) => setUsername(e.target.value)} />
+                        <label>Email</label>
+                        <input type='email' placeholder={user.email} onChange={(e) => setEmail(e.target.value)} />
+                        <label>Mật khẩu</label>
+                        <input type='password' onChange={(e) => setPassword(e.target.value)} />
+                        <button className='settings-submit' type='submit'>Cập nhật</button>
+                        {success && (
+                            <span style={{ color: 'green', textAlign: 'center', marginTop: '20px' }} >
+                                Thông tin đã được cập nhật
+                            </span>
+                        )}
+                    </form>
+                </div>
+                <Sidebar />
             </div>
-            <Sidebar/>
-        </div>
-    </>
-    
-  )
+        </>
+
+    )
 }

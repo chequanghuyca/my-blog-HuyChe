@@ -81,3 +81,17 @@
 .top-search-icon:hover {
     color: rgb(179, 161, 61);
 }
+
+.top-list-logout {
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    cursor: pointer;
+    align-items: center;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.top-list-logout:hover {
+    color: rgb(247, 80, 80);
+}

@@ -50,6 +50,11 @@
     transition: 0.2s;
 }
 
+.login-button:dísabled {
+    cursor: not-allowed;
+    border-color: rgb(228, 109, 109);
+}
+
 .login-button:hover {
   background-color: #333;
 }
