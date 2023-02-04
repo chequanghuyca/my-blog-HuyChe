@@ -12,6 +12,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Varela Round', sans-serif;
+    text-align: justify;
 }
 
 .sidebar-title {
@@ -46,6 +48,12 @@
     display: inline-block;
     width: 50%;
     cursor: pointer;
+    transition: 0.2s;
+}
+
+.sidebar-list-item:hover {
+    color: rgb(255, 119, 119);
+    font-size: 25px;
 }
 
 .sidebar-social {

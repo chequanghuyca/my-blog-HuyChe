@@ -31,12 +31,11 @@
     padding: 10px;
     background-color: rgb(239, 239, 239);
     border: none;
+    width: 300px;
     border-radius: 5px;
 }
 
-.register-input:focus {
-    outline: none;
-  }
+
 
 .login-button {
     margin-top: 20px;
@@ -47,6 +46,12 @@
     border: none;
     border-radius: 10px;
     text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: 0.2s;
+}
+
+.login-button:hover {
+  background-color: #333;
 }
 
 .login-register-button {

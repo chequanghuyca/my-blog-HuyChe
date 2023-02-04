@@ -53,7 +53,21 @@
 }
 
 .top-list-item:hover {
-    color: rgb(139, 139, 139);
+    color: rgb(179, 161, 61);
+    font-size: 21px;
+}
+
+.top-list-item-right {
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    cursor: pointer;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.top-list-item-right:hover {
+    color: rgb(179, 161, 61);
 }
 
 .top-search-icon {
@@ -61,4 +75,9 @@
     color: #666;
     cursor: pointer;
     margin-left: 15px;
+    transition: 0.2s;
+}
+
+.top-search-icon:hover {
+    color: rgb(179, 161, 61);
 }
