@@ -22,7 +22,7 @@ export default function Sidebar() {
     <div className='sidebar'>
       <div className='sidebar-item'>
         <span className='sidebar-title'>MÌNH LÀ HUY CHE</span>
-        <img src='https://scontent.fsgn2-3.fna.fbcdn.net/v/t39.30808-6/328435903_759384045109056_472057914952073295_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=4fOXtRT3aRwAX8kl8Gd&_nc_ht=scontent.fsgn2-3.fna&oh=00_AfDb1bs-Vum41TKacqpeGoiYt14cRdwx8n5ZqbsY-csI3w&oe=63DE6F46' alt='' />
+        {/* <img src='https://scontent.fsgn2-3.fna.fbcdn.net/v/t39.30808-6/328435903_759384045109056_472057914952073295_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=4fOXtRT3aRwAX8kl8Gd&_nc_ht=scontent.fsgn2-3.fna&oh=00_AfDb1bs-Vum41TKacqpeGoiYt14cRdwx8n5ZqbsY-csI3w&oe=63DE6F46' alt='' /> */}
         <p>If you're trying to achieve, there will be roadblocks. I've had them, everybody has had them. But obstacles don't have to stop you. If you run into a wall, don't turn around and give up. Figure out how to climb it, go through it, or work around it.</p>
       </div>
       <div className='sidebar-item'>
