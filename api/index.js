@@ -13,7 +13,8 @@ dotenv.config();
 app.use(express.json());
 app.use('/images', express.static(path.join(__dirname, '/images')));
 
-mongoose.connect(process.env.MONGO_URL).then(console.log('Connected to MongoDB!')).catch((err) => console.log(err));
+mongoose.set('strictQuery', false);
+mongoose.connect(process.env.MONGO_URL, () => { console.log('Connected to MongoDB'); });
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {

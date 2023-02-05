@@ -32,7 +32,7 @@ router.delete('/:id', async (req, res) => {
                 res.status(500).json(err);
             }
         } catch (err) {
-            res.status(404).json('Không tìm thấy người dùng'); 
+            res.status(404).json('Không tìm thấy người dùng');
         }
     } else {
         res.status(401).json('Bạn chỉ có thể xóa tài khoản của mình!');
