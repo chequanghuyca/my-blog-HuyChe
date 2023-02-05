@@ -1,4 +1,4 @@
-import axios from '../ClientAxios';
+import axios from '../../ClientAxios'
 import { useContext, useState } from 'react';
 import { Context } from '../../context/Context';
 import './write.css'

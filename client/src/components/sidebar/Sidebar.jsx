@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './sidebar.css'
-import axios from '../ClientAxios';
+import axios from '../../ClientAxios'
 import { Link } from 'react-router-dom';
 
 function MyLink({ href, target, children }) {

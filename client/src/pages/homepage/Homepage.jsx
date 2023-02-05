@@ -3,7 +3,7 @@ import Posts from '../../components/posts/Posts'
 import Sidebar from '../../components/sidebar/Sidebar'
 import './homepage.css'
 import { useEffect, useState } from 'react';
-import axios from '../ClientAxios';
+import axios from '../../ClientAxios'
 import { useLocation } from 'react-router';
 
 export default function Homepage() {
