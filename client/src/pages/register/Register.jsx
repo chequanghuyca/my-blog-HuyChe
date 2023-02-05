@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from '../ClientAxios';
 import { useState } from 'react'
 import './register.css'
 

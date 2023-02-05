@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../ClientAxios';
 import { useContext, useState } from 'react';
 import Sidebar from '../../components/sidebar/Sidebar'
 import { Context } from '../../context/Context';
