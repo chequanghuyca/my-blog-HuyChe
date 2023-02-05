@@ -32,17 +32,23 @@ export default function Write() {
         <div className='write'>
             {file && (<img className='write-img' src={URL.createObjectURL(file)} alt='' />)}
             <form className='write-form' onSubmit={handleSubmit}>
-                <div className='write-form-group'>
+                <div className='write-form-img'>
                     <label htmlFor='fileInput'>
-                        <i className='write-icon fa fa-plus' />
+                        <i className='write-icon fa fa-file-image-o' aria-hidden='true'> </i>
                     </label>
+                    <i className='text-icon'>&nbsp; Thêm ảnh</i>
                     <input type='file' id='fileInput' style={{ display: 'none' }} onChange={(e) => setFile(e.target.files[0])} />
-                    <input type='text' placeholder='Title' className='write-input' autoFocus={true} onChange={e => setTitle(e.target.value)} />
                 </div>
                 <div className='write-form-group'>
-                    <textarea placeholder='Cập nhật thông tin của bạn' type='text' className='write-input write-text' onChange={e => setDesc(e.target.value)} />
+                    <input type='text' placeholder='Tiêu đề...' className='write-input' autoFocus={true} onChange={e => setTitle(e.target.value)} />
                 </div>
-                <button className='write-submit'type='submit'>Đăng</button>
+                <div className='write-form-group'>
+                    <textarea placeholder='Nội dung...' type='text' className='write-input write-text' onChange={e => setDesc(e.target.value)} />
+                </div>
+                <button className='write-submit' type='submit'> 
+                    <i className='fa fa-paper-plane' aria-hidden='true'/>
+                    &nbsp; Đăng 
+                </button>
             </form>
         </div>
     )

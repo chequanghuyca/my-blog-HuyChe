@@ -1,6 +1,6 @@
 .top {
     width: 100%;
-    height: 70px;
+    height: 65px;
     background-color: #f0f0f0;
     position: sticky;
     top:0;
@@ -33,6 +33,7 @@
     height: 40px;
     border-radius: 50%;
     object-fit: contain;
+    padding-top: 10px;
 }
 
 .top-list {
@@ -41,12 +42,13 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    line-height: 38px;
+
 }
 
 .top-list-item {
     margin-right: 20px;
     font-size: 20px;
-    font-weight: 300;
     cursor: pointer;
     align-items: center;
     transition: 0.2s;
@@ -54,15 +56,14 @@
 
 .top-list-item:hover {
     color: rgb(179, 161, 61);
-    font-size: 21px;
 }
 
 .top-list-item-right {
     margin-right: 20px;
     font-size: 20px;
-    font-weight: 300;
     cursor: pointer;
     align-items: center;
+    line-height: 40px;
     transition: 0.2s;
 }
 

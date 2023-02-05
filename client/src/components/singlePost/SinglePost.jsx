@@ -71,7 +71,7 @@ export default function SinglePost() {
                 )}
                 {updateMode && (
                     <button className='single-post-button' onClick={handleUpdate}>
-                        Cập nhật
+                        <i className='fa fa-pencil-square-o' aria-hidden='true'/>&nbsp; Cập nhật 
                     </button>
                 )}
             </div>

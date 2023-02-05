@@ -12,7 +12,6 @@
 
 .write-form {
     position: relative;
-    
 }
 
 .write-form-group {
@@ -21,23 +20,47 @@
     align-items: center;
 }
 
+.write-form-img {
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+}
+
 .write-icon {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    border: 1px solid;
+    width: 70px;
+    height: 70px;
+    font-size: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: gray;
     cursor: pointer;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    transition: 0.2s;
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+.write-icon:hover {
+    color: #000000;
+}
+
+
+.text-icon {
+    font-size: 25px;
+    font-style: normal;
+    font-family: 'Josefin Sans', sans-serif;
+    color: gray;
 }
 
 .write-input {
     font-size: 30px;
-    border: none;
     padding: 20px;
     width: 70vw;
+    margin: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
 }
 
 .write-input:focus {
@@ -47,19 +70,23 @@
 .write-text {
     font-size: 20px;
     height: 10vh;
-    
 }
 
 .write-submit {
     position: absolute;
-    top: 20px;
-    right: 50px;
+    font-size: 20px;
+    margin-left: 170px;
     color: white;
+    cursor: pointer;
     background-color: gray;
     padding: 10px;
     border: none;
     border-radius: 10px;
-    cursor: pointer;
-    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: 0.2s;
+}
+
+.write-submit:hover {
+  background-color: #333;
 }
 

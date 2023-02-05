@@ -17,7 +17,9 @@ export default function TopBar() {
             <div className='top-center'>
                 <ul className='top-list'>
                     <li className='top-list-item' >
-                        <Link className='link' to='/' style={{ padding: '10px', fontWeight: 'bold' }}>HOME</Link>
+                        <Link className='link' to='/' style={{  fontSize: '30px' }} title='Trang chủ'>
+                            <i className='fa fa-home' aria-hidden='true'/>
+                        </Link>
                     </li>
                     <li className='top-list-item' >
                         <Link className='link' to='/' style={{ padding: '10px', fontWeight: 'bold' }}>ABOUT</Link>
@@ -49,9 +51,9 @@ export default function TopBar() {
                             <li className='top-list-item-right'>
                                 <Link className='link' to='/login'>Đăng nhập </Link>
                             </li>
-                            <li className='top-list-item-right'>
+                            {/* <li className='top-list-item-right'>
                                 <Link className='link' to='/register'>Đăng ký </Link>
-                            </li>
+                            </li> */}
                         </ul>
                     )
                 }
