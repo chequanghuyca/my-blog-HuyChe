@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import './sidebar.css'
 import axios from '../../ClientAxios'
 import { Link } from 'react-router-dom';
-import sidebar_huyche from '../../images/sidebar_huyche.png';
 
 function MyLink({ href, target, children }) {
   return <a href={href} target={target}>{children}</a>;
@@ -23,7 +22,7 @@ export default function Sidebar() {
     <div className='sidebar'>
       <div className='sidebar-item'>
         <span className='sidebar-title'>MÌNH LÀ HUY CHE</span>
-        <img src={sidebar_huyche} alt='' />
+        <img src='https://scontent.fsgn2-3.fna.fbcdn.net/v/t39.30808-6/328435903_759384045109056_472057914952073295_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=PbcnG8cbQ4cAX_rfoL1&_nc_ht=scontent.fsgn2-3.fna&oh=00_AfBSZiFHfjs-HAC5_AQOnFfLjEJI_81wmCU_j8xdfnMkhg&oe=63E65846' alt='' />
         <p>If you're trying to achieve, there will be roadblocks. I've had them, everybody has had them. But obstacles don't have to stop you. If you run into a wall, don't turn around and give up. Figure out how to climb it, go through it, or work around it.</p>
       </div>
       <div className='sidebar-item'>
