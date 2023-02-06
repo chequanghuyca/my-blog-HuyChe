@@ -32,6 +32,11 @@
     font-weight: 700;
     margin-top: 15px;
     cursor: pointer;
+    transition: 0.1s;
+}
+
+.post-title:hover {
+    color: rgb(179, 161, 61);
 }
 
 .post-date {

@@ -42,6 +42,14 @@ export default function SinglePost() {
         <div className='single-post'>
             <div className='single-post-wrapper'>
                 {post.photo && (<img className='single-post-img' src={PF + post.photo} alt='' />)}
+                <div className='single-post-info'>
+                    <span className='single-post-author'>Tác giả:
+                        <Link to={`/?user=${post.username}`} className='link'>
+                            <b>{post.username}</b>
+                        </Link>
+                    </span>
+                    <span className='single-post-date'>{new Date(post.createdAt).toDateString()}</span>
+                </div>
                 {updateMode ? (
                     <input type='text' value={title} className='single-post-title-input' autoFocus onChange={(e) => setTitle(e.target.value)} />
                 ) : (
@@ -55,15 +63,6 @@ export default function SinglePost() {
                         )}
                     </h1>
                 )}
-
-                <div className='single-post-info'>
-                    <span className='single-post-author'>Tác giả:
-                        <Link to={`/?user=${post.username}`} className='link'>
-                            <b>{post.username}</b>
-                        </Link>
-                    </span>
-                    <span className='single-post-date'>{new Date(post.createdAt).toDateString()}</span>
-                </div>
                 {updateMode ? (
                     <textarea className='single-post-desc-input' value={desc} onChange={(e) => setDesc(e.target.value)} />
                 ) : (

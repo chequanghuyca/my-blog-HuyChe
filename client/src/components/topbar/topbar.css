@@ -8,6 +8,8 @@
     align-items: center;
     font-family: 'Josefin Sans', sans-serif;
     z-index: 999;
+    transition: 0.2s;
+    box-shadow: 0 0 10px rgba(224, 91, 91, 0.1);
 }
 
 .top-left,.top-right {
@@ -43,11 +45,11 @@
     padding: 0;
     list-style: none;
     line-height: 38px;
-
+    
 }
 
 .top-list-item {
-    margin-right: 20px;
+    margin-right: 15px;
     font-size: 20px;
     cursor: pointer;
     align-items: center;
