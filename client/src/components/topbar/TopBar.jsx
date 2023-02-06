@@ -17,18 +17,18 @@ export default function TopBar() {
             <div className='top-center'>
                 <ul className='top-list'>
                     <li className='top-list-item' >
-                        <Link className='link' to='/' style={{  fontSize: '30px' }} title='Trang chủ'>
-                            <i className='fa fa-home' aria-hidden='true'/>
+                        <Link className='link' to='/' style={{ fontSize: '30px' }} title='Trang chủ'>
+                            <i className='fa fa-home' aria-hidden='true' />
                         </Link>
                     </li>
                     <li className='top-list-item' >
-                        <Link className='link' to='/' style={{ padding: '10px', fontWeight: 'bold' }}>ABOUT</Link>
+                        <Link className='link' to='/' style={{ padding: '10px', fontWeight: 'bold' }}>THÔNG TIN VỀ TÔI</Link>
                     </li>
                     <li className='top-list-item' >
-                        <Link className='link' to='/' style={{ padding: '10px', fontWeight: 'bold' }}>CONTACT</Link>
+                        <Link className='link' to='/' style={{ padding: '10px', fontWeight: 'bold' }}>LIÊN HỆ VỚI TÔI</Link>
                     </li>
                     <li className='top-list-item' >
-                        <Link className='link' to='/write' style={{ padding: '10px', fontWeight: 'bold' }}>WRITE</Link>
+                        <Link className='link' to='/write' style={{ padding: '10px', fontWeight: 'bold' }}>VIẾT BLOG</Link>
                     </li>
                 </ul>
             </div>
