@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
 import './topbar.css'
@@ -11,8 +11,27 @@ export default function TopBar() {
         dispatch({ type: 'LOGOUT' });
     };
 
+    const [sticky, setSticky] = useState(false);
+
+    
+
+    const handleScroll = () => {
+        if (window.pageYOffset > 65) {
+            setSticky(true);
+        } else {
+            setSticky(false);
+        }
+    };
+    
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    });
+
     return (
-        <div className='top'>
+        <header className={`top ${sticky ? 'sticky' : ''}`}>
             <div className='top-left' />
             <div className='top-center'>
                 <ul className='top-list'>
@@ -59,6 +78,6 @@ export default function TopBar() {
                 }
                 <i className='top-search-icon fa fa-search' aria-hidden='true'></i>
             </div>
-        </div>
-    )
+        </header>
+    );
 }
